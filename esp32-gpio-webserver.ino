@@ -3,16 +3,11 @@
 #include <ESPmDNS.h>
 #include <ArduinoOTA.h>
 
-#ifndef STASSID
-#define STASSID "YOUR_WIFI_NAME"
-#define STAPSK  "YOUR_WIFI_PASSWORD"
-#endif
+#include "secrets.h"
 
-const char* ssid = STASSID;
-const char* password = STAPSK;
-
-// Change this to your own OTA password.
-const char* otaPassword = "YOUR_OTA_PASSWORD";
+const char* ssid = WIFI_SSID;
+const char* password = WIFI_PASSWORD;
+const char* otaPassword = OTA_PASSWORD;
 
 WebServer server(80);
 
